@@ -11884,3 +11884,1807 @@ Processing by SpacesController#location as HTML
 Completed 200 OK in 31ms (Views: 25.3ms | ActiveRecord: 3.6ms)
 
 
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:27:44 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:27:47 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"WFAavDcvHXAtd8h6LngRYrKDI18E7BFuSKy60kNqygrwSdDIuDifsCSFYzv8HeaDK1jk/oJzGADxbr/8Wpx8qQ==", "location"=>"1-0"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=1-0
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=1-0" for 127.0.0.1 at 2018-01-23 15:27:47 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=1-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:34:43 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/davidwelch/Development/Minesweeper-II/app/models/space.rb:37: syntax error, unexpected '<'
+        <%= button_to @button_id, spac...
+         ^
+/Users/davidwelch/Development/Minesweeper-II/app/models/space.rb:37: unterminated string meets end of file
+/Users/davidwelch/Development/Minesweeper-II/app/models/space.rb:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/space.rb:37: syntax error, unexpected '<'
+app/models/space.rb:37: unterminated string meets end of file
+app/models/space.rb:37: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/spaces_controller.rb:5:in `new'
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:34:57 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 24.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:35:01 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"o0C+jALpNeseEg9JGzVPR6hdGkz8ujD2ZvTZuZT4Au8LWXT4jf63KxfgpAjJULimMYbd7XolOZjfNtyXjQ60TA==", "location"=>"1-0"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=1-0
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/spaces/location=1-0" for 127.0.0.1 at 2018-01-23 15:35:01 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=1-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendered spaces/location.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `location' for nil:NilClass):
+    42:   <%= button_to @button_id, spaces_path, {method: :post, params: { location: "#{@grid_location.location}" }, class: "bomb_button"} %>
+    43: 
+    44: <% else Space.make_guess(@location) %>
+    45:   <%= button_to @button_id, spaces_path, {method: :post, params: { location: "#{@grid_location.location}" }, class: "guessed_button"} %>
+    46: 
+    47:    <% if Space.win %>
+    48:      <h1>YOU WIN!</h1>
+  
+app/views/spaces/location.html.erb:45:in `_app_views_spaces_location_html_erb___2603991842915200464_70360639228620'
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:35:48 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:35:51 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"FJyV7xcIBk4V+vzARlv/FLSaP7Tp0a4aIK5HWGGX6Vi8hV+bmB+EjhwIV4GUPgj1LUH4FW9Op3SZbEJ2eGFf+w==", "location"=>"0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 15:35:51 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 20:35:51.093255"], ["id", 2]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+  Rendered spaces/location.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 30ms (Views: 24.5ms | ActiveRecord: 3.1ms)
+
+
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT "spaces".* FROM "spaces"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["updated_at", "2018-01-23 20:36:03.946553"], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["updated_at", "2018-01-23 20:36:03.950920"], ["id", 3]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:36:09 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:36:11 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"7InNVOdtUUm6+sB2ZQbriE45oWoED6XmiZIrW43CdQJEkAcgaHrTibMIaze3Yxxp1+Jmy4KQrIgwUC51lDTDoQ==", "location"=>"0-1"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 15:36:11 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 20:36:11.606570"], ["id", 2]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+  Rendered spaces/location.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 37ms (Views: 31.4ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:36:16 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"7InNVOdtUUm6+sB2ZQbriE45oWoED6XmiZIrW43CdQJEkAcgaHrTibMIaze3Yxxp1+Jmy4KQrIgwUC51lDTDoQ==", "location"=>"1-1"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=1-1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/spaces/location=1-1" for 127.0.0.1 at 2018-01-23 15:36:16 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=1-1"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 20:36:16.484254"], ["id", 4]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+  Rendered spaces/location.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 29ms (Views: 23.3ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:36:21 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"7InNVOdtUUm6+sB2ZQbriE45oWoED6XmiZIrW43CdQJEkAcgaHrTibMIaze3Yxxp1+Jmy4KQrIgwUC51lDTDoQ==", "location"=>"0-0"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 15:36:21 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:40:26 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 20.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:40:28 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"dWNecJPBu0EqCd0fKm0gMtTsAHOExCbbTwMNIf43B7TdepQEHNY5gSP7dl74CNfTTTfH0gJbL7X2wQgP58GxFw==", "location"=>"0-0"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 11ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 15:40:28 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:40:32 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"dWNecJPBu0EqCd0fKm0gMtTsAHOExCbbTwMNIf43B7TdepQEHNY5gSP7dl74CNfTTTfH0gJbL7X2wQgP58GxFw==", "location"=>"1-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=1-0
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=1-0" for 127.0.0.1 at 2018-01-23 15:40:32 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=1-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:41:03 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:41:05 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"UY1iUAIQczxgyIMOfBj/+0pjU8jxCnJFXjKiOARmXjX5lKgkjQfx/Gk6KE+ufQga07iUaXeVeyvn8KcWHZDolg==", "location"=>"0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 15:41:05 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+  Rendered spaces/location.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:41:09 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"UY1iUAIQczxgyIMOfBj/+0pjU8jxCnJFXjKiOARmXjX5lKgkjQfx/Gk6KE+ufQga07iUaXeVeyvn8KcWHZDolg==", "location"=>"0-0"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 15:41:09 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:47:34 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 79ms (Views: 61.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:48:02 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 317ms (Views: 254.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:48:06 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"n62XlaIQDjXxzenE9FBeBDBq/Yp1wwILfDVvgMVjoLE3tF3hLQeM9fg/QoUmNanlqbE6K/NcC2XF92qu3JUWEg==", "location"=>"0-1"}
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 27ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 15:48:06 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:48:10 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"zXgmpec1ROqUY5xNEY755+yHzVE2shd7VAhkrTOjx1dlYezRaCLGKp2RNwzD6w4GdVwK8LAtHhXtymGDKlVx9A==", "location"=>"1-1"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=1-1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=1-1" for 127.0.0.1 at 2018-01-23 15:48:10 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=1-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:48:12 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"SFFl56OZ6KTI7eJMux/jE5M/4P0VLbbxwerC08pbRfngSK+TLI5qZMEfSQ1pehTyCuQnXJOyv594KMf9063zWg==", "location"=>"1-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=1-1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=1-1" for 127.0.0.1 at 2018-01-23 15:48:12 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=1-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT "spaces".* FROM "spaces"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["updated_at", "2018-01-23 20:48:23.109499"], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["updated_at", "2018-01-23 20:48:23.115407"], ["id", 4]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:48:27 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:48:29 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"lqFRzQdHP0Od8BkbWDEj4amGKxuLi6Ooa1wlH1i+1nQ+uJu5iFC9g5QCslqKVNQAMF3sug0UqsbSniAxQUhg1w==", "location"=>"1-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=1-0
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/spaces/location=1-0" for 127.0.0.1 at 2018-01-23 15:48:29 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=1-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:48:33 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"lqFRzQdHP0Od8BkbWDEj4amGKxuLi6Ooa1wlH1i+1nQ+uJu5iFC9g5QCslqKVNQAMF3sug0UqsbSniAxQUhg1w==", "location"=>"1-1"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=1-1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=1-1" for 127.0.0.1 at 2018-01-23 15:48:33 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=1-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:48:37 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"lqFRzQdHP0Od8BkbWDEj4amGKxuLi6Ooa1wlH1i+1nQ+uJu5iFC9g5QCslqKVNQAMF3sug0UqsbSniAxQUhg1w==", "location"=>"0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 15:48:37 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT "spaces".* FROM "spaces"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:55:05 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:55:08 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"Y8XoFGC3S5+rrorkCINbRCvfBOVY58Jvvd1qBacGt0nL3CJg76DJX6JcIaXa5qylsgTDRN54ywEEH28rvvAB6g==", "location"=>"0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 15:55:08 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:55:14 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:55:15 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"wbTTp6K4jb4BemtZrRPgzyJNEg0vbvMMDcidoiAmFKZprRnTLa8PfgiIwBh/dhcuu5bVrKnx+mK0CpiMOdCiBQ==", "location"=>"0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 15:55:15 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT "spaces".* FROM "spaces"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:56:14 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:56:16 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"EQX70i/TtTDAINoagurdRwToyvoQZp/yXJWn76P/4/65HDGmoMQ38MnScVtQjyqmnTMNW5b5lpzlV6LBuglVXQ==", "location"=>"0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 15:56:16 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (10054.2ms)
+Completed 500 Internal Server Error in 10062ms (ActiveRecord: 0.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block (2 levels) in _app_views_spaces_location_html_erb___1875471572738499218_70199378493540'
+app/views/spaces/location.html.erb:48:in `block (2 levels) in _app_views_spaces_location_html_erb___1875471572738499218_70199378493540'
+app/views/spaces/location.html.erb:44:in `block in _app_views_spaces_location_html_erb___1875471572738499218_70199378493540'
+app/views/spaces/location.html.erb:42:in `_app_views_spaces_location_html_erb___1875471572738499218_70199378493540'
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 15:56:59 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.4ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 280ms (Views: 210.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 15:57:02 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"hyAumOMOMs/nuFEYRqf8QBQy9tLmK8DLYO3Tc4xqZkAvOeTsbBmwD+5K+lmUwguhjekxc2C0yaXZL9ZdlZzQ4w==", "location"=>"0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 15:57:02 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (259391.5ms)
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:01:22 -0500
+Completed 500 Internal Server Error in 259457ms (ActiveRecord: 0.2ms)
+
+
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (1.3ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block (2 levels) in _app_views_spaces_location_html_erb__4224287812828635045_70340170264740'
+app/views/spaces/location.html.erb:48:in `block (2 levels) in _app_views_spaces_location_html_erb__4224287812828635045_70340170264740'
+app/views/spaces/location.html.erb:44:in `block in _app_views_spaces_location_html_erb__4224287812828635045_70340170264740'
+app/views/spaces/location.html.erb:42:in `_app_views_spaces_location_html_erb__4224287812828635045_70340170264740'
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 3118ms (Views: 2914.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:02:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 274ms (Views: 208.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 16:02:39 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"vu4D5wF6DNbUWxuBBFy02dwuSiCeKQy3mgkV0+N8rlMW98mTjm2OFt2psMDWOUM4RfWNgRi2BdkjyxD9+ooY8A==", "location"=>"0-0"}
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 27ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 16:02:39 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180122134422)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (25.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180122134422"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGrids (20180122134538)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "grids" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180122134538"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSessions (20180122134713)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "grid_id" integer, "rounds" integer DEFAULT 0, "wins" integer DEFAULT 0, "losses" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180122134713"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTopPlayers (20180122134739)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "top_players" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180122134739"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSpaces (20180122143631)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "spaces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "grid_id" integer, "location" varchar, "bomb" boolean, "guessed" boolean DEFAULT 'f', "class" varchar DEFAULT 'button', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180122143631"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-01-23 21:30:01.728339"], ["updated_at", "2018-01-23 21:30:01.728339"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bob"], ["created_at", "2018-01-23 21:30:03.913831"], ["updated_at", "2018-01-23 21:30:03.913831"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Allison"], ["created_at", "2018-01-23 21:30:03.917037"], ["updated_at", "2018-01-23 21:30:03.917037"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sessions" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-01-23 21:30:03.985866"], ["updated_at", "2018-01-23 21:30:03.985866"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSession Load (0.1ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "grids" ("session_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["session_id", 1], ["created_at", "2018-01-23 21:30:03.998544"], ["updated_at", "2018-01-23 21:30:03.998544"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:37:53 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 270ms (Views: 199.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 16:38:05 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"mfEp2fo5sNtn9RVtvrAJaA8uWTmItv6bI364e3HzIvYx6OOtdS4yG24Hvixs1f6JlvWemA4p9/WavL1VaAWUVQ==", "location"=>"0-0"}
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 16:38:05 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/models/space.rb:16:in `make_guess'
+app/controllers/spaces_controller.rb:21:in `location'
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:38:56 -0500
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:39:06 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 24.2ms | ActiveRecord: 0.9ms)
+
+
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 45ms (Views: 27.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 16:39:15 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"DIKmVzN3hxA+GQetdL4ZGuwHjomlSDJu+nCMAnbgYgikm2wjvGAF0DfrrOym2+77ddxJKCPXOwBDsoksbxbUqw==", "location"=>"0-0"}
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 16:39:15 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bob"], ["created_at", "2018-01-23 21:40:34.720368"], ["updated_at", "2018-01-23 21:40:34.720368"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Allison"], ["created_at", "2018-01-23 21:40:34.723617"], ["updated_at", "2018-01-23 21:40:34.723617"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-01-23 21:40:34.822518"], ["updated_at", "2018-01-23 21:40:34.822518"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "grids" ("session_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["session_id", 1], ["created_at", "2018-01-23 21:40:34.841427"], ["updated_at", "2018-01-23 21:40:34.841427"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180122134422)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180122134422"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGrids (20180122134538)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "grids" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180122134538"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSessions (20180122134713)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "grid_id" integer, "rounds" integer DEFAULT 0, "wins" integer DEFAULT 0, "losses" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180122134713"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTopPlayers (20180122134739)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "top_players" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180122134739"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSpaces (20180122143631)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "spaces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "grid_id" integer, "location" varchar, "bomb" boolean, "guessed" boolean DEFAULT 'f', "button_class" varchar DEFAULT 'button', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180122143631"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-01-23 21:45:41.460876"], ["updated_at", "2018-01-23 21:45:41.460876"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bob"], ["created_at", "2018-01-23 21:47:29.039893"], ["updated_at", "2018-01-23 21:47:29.039893"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Allison"], ["created_at", "2018-01-23 21:47:29.043230"], ["updated_at", "2018-01-23 21:47:29.043230"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "sessions" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-01-23 21:47:29.112367"], ["updated_at", "2018-01-23 21:47:29.112367"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "grids" ("session_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["session_id", 1], ["created_at", "2018-01-23 21:47:29.130642"], ["updated_at", "2018-01-23 21:47:29.130642"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.4ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "spaces" ("grid_id", "location", "bomb", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["grid_id", 1], ["location", "0-0"], ["bomb", "t"], ["created_at", "2018-01-23 21:47:29.149990"], ["updated_at", "2018-01-23 21:47:29.149990"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "spaces" ("grid_id", "location", "bomb", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["grid_id", 1], ["location", "0-1"], ["bomb", "f"], ["created_at", "2018-01-23 21:47:29.158472"], ["updated_at", "2018-01-23 21:47:29.158472"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "spaces" ("grid_id", "location", "bomb", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["grid_id", 1], ["location", "1-0"], ["bomb", "f"], ["created_at", "2018-01-23 21:47:29.162568"], ["updated_at", "2018-01-23 21:47:29.162568"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "spaces" ("grid_id", "location", "bomb", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["grid_id", 1], ["location", "1-1"], ["bomb", "f"], ["created_at", "2018-01-23 21:47:29.166052"], ["updated_at", "2018-01-23 21:47:29.166052"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.9ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:48:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 300ms (Views: 226.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 16:48:44 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"xbpQqDp6GM69zQIZYD9LdJiCPQvbIwbdPuhd2FDfDXhto5rctW2aDrQ/qViyWryVAVn6ql28D7OHKlj2SSm72w==", "location"=>"0-0"}
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 16:48:44 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:49:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.3ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 217ms (Views: 172.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 16:49:33 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"Wa7xlvJHj/EkZmtV6pcyD38Q92cURV3wVJ36cQ7gIHrxtzvifVANMS2UwBQ48sXu5sswxpLaVJ7tX/9fFxaW2Q==", "location"=>"0-0"}
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 16:49:33 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 21:49:33.730512"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 2.7ms)
+
+
+  
+NoMethodError (undefined method `change_class' for #<Class:0x007faa39162250>):
+  
+app/controllers/spaces_controller.rb:22:in `location'
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:50:23 -0500
+Processing by SpacesController#new as HTML
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:50:33 -0500
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 47ms (Views: 26.6ms | ActiveRecord: 0.9ms)
+
+
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 59ms (Views: 34.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 16:50:37 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"16GSWV9t1FCrZdqJWMYBy60Y8jzu94hCDLK0S3lu1Sd/uFgt0HpWkKKXcciKo/YqNMM1nWhogSy1cLFlYJhjhA==", "location"=>"0-0"}
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 16:50:37 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE Grid Load (0.0ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "bomb_button"], ["updated_at", "2018-01-23 21:50:37.764588"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 60ms (Views: 30.9ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 16:50:52 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"16GSWV9t1FCrZdqJWMYBy60Y8jzu94hCDLK0S3lu1Sd/uFgt0HpWkKKXcciKo/YqNMM1nWhogSy1cLFlYJhjhA==", "location"=>"0-1"}
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 16:50:52 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 21:50:52.540220"], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "guessed_button"], ["updated_at", "2018-01-23 21:50:52.545380"], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 62ms (Views: 48.8ms | ActiveRecord: 3.7ms)
+
+
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT "spaces".* FROM "spaces"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["updated_at", "2018-01-23 21:52:00.989287"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["updated_at", "2018-01-23 21:52:00.995677"], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/spacesnew" for 127.0.0.1 at 2018-01-23 16:52:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/spacesnew"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:52:12 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 104ms (Views: 25.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 16:52:13 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"J0r5L81IhcPYW0OWEny5BkH4itmbiK8uNh4Anazw2cePUzNbQl8HA9Gp6NfAGU7n2CNNeB0XpkCP3AWztQZvZA==", "location"=>"0-1"}
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 16:52:13 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 21:52:13.691073"], ["id", 2]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 22.1ms | ActiveRecord: 3.9ms)
+
+
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT "spaces".* FROM "spaces"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.6ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["updated_at", "2018-01-23 21:53:11.379380"], ["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (1.8ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT "spaces".* FROM "spaces"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "button"], ["updated_at", "2018-01-23 21:53:39.304650"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "button"], ["updated_at", "2018-01-23 21:53:39.311188"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:53:59 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 44ms (Views: 23.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 16:54:02 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"ms4aT5z/UzJ5rmaqxEStzlW0cZ7gKrxIY0n/5RHU1Wwy19A7E+jR8nBczesWIVovzG+2P2a1tSbai/rLCCJjzw==", "location"=>"0-1"}
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 16:54:02 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 21:54:02.496941"], ["id", 2]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "guessed_button"], ["updated_at", "2018-01-23 21:54:02.502310"], ["id", 2]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 62ms (Views: 23.5ms | ActiveRecord: 18.0ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 16:54:44 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"ln/RVQRMnMJlo6oqRiUDJgeaIz2S5oy8nYN0fVRVzno+Zhshi1seAmxRAWuUQPTHnkHknBR5hdIkQXFTTaN42Q==", "location"=>"1-0"}
+Redirected to http://localhost:3000/spaces/location=1-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=1-0" for 127.0.0.1 at 2018-01-23 16:54:44 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=1-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 21:54:44.374868"], ["id", 3]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "guessed_button"], ["updated_at", "2018-01-23 21:54:44.380276"], ["id", 3]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 48ms (Views: 23.1ms | ActiveRecord: 17.2ms)
+
+
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT "spaces".* FROM "spaces"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["button_class", "button"], ["updated_at", "2018-01-23 21:57:20.408189"], ["id", 2]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["button_class", "button"], ["updated_at", "2018-01-23 21:57:20.413322"], ["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:57:37 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/davidwelch/Development/Minesweeper-II/app/controllers/spaces_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/spaces_controller.rb:27: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 16:58:09 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 595ms (Views: 501.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 16:58:28 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"Jtc+OlDmiDqVg2OBbszQn7Bb2EDXHWJbn0B7PI/hzVGOzvRO3/EK+pxxyMC8qSd+KYAf4VGCazUmgn4Slhd78g==", "location"=>"0-1"}
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 16:58:28 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 21:58:28.718016"], ["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "guessed_button"], ["updated_at", "2018-01-23 21:58:28.725030"], ["id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 81ms (Views: 23.3ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 16:58:30 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"yR0ggXUqIiY5QpOGZNUA+oeSdDxBmgYKMWDkV0tuTZBhBOr1+j2g5jCwOMe2sPcbHkmznccFD2SIouF5Upj7Mw==", "location"=>"1-0"}
+Redirected to http://localhost:3000/spaces/location=1-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=1-0" for 127.0.0.1 at 2018-01-23 16:58:31 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=1-0"}
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 21:58:31.024829"], ["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "guessed_button"], ["updated_at", "2018-01-23 21:58:31.029083"], ["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+Redirected to http://localhost:3000/spaces/winner
+Completed 302 Found in 11ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/spaces/winner" for 127.0.0.1 at 2018-01-23 16:58:31 -0500
+Processing by SpacesController#winner as HTML
+  Rendering spaces/winner.html.erb within layouts/application
+  Rendered spaces/winner.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/" for 127.0.0.1 at 2018-01-23 17:00:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/spaces"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 17:00:07 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 70ms (Views: 60.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 17:00:10 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"3jfDE2ClqehhSi8e1uSm8vuTXKo8t1zRrQ33Zcluo5p2Lgln77IrKGi4hF8EgVETYkibC7ooVb8Uz/JL0JgVOQ==", "location"=>"0-1"}
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 17:00:10 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE Grid Load (0.0ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+Redirected to http://localhost:3000/spaces/winner
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/spaces/winner" for 127.0.0.1 at 2018-01-23 17:00:10 -0500
+Processing by SpacesController#winner as HTML
+  Rendering spaces/winner.html.erb within layouts/application
+  Rendered spaces/winner.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/winner" for 127.0.0.1 at 2018-01-23 17:00:21 -0500
+Processing by SpacesController#winner as HTML
+  Rendering spaces/winner.html.erb within layouts/application
+  Rendered spaces/winner.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/winner" for 127.0.0.1 at 2018-01-23 17:00:24 -0500
+Processing by SpacesController#winner as HTML
+  Rendering spaces/winner.html.erb within layouts/application
+  Rendered spaces/winner.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 17:01:39 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 17:01:42 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"uhNp330CqbPbfNSg98MNAWNI1uQm1OpH3wz4aHMAKkcSCqOr8hUrc9KOf+Elpvrg+pMRRaBL4ylmzv1Gavac5A==", "location"=>"0-1"}
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 17:01:42 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE Grid Load (0.0ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+Redirected to http://localhost:3000/spaces/winner
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/spaces/winner" for 127.0.0.1 at 2018-01-23 17:01:42 -0500
+Processing by SpacesController#winner as HTML
+  Rendering spaces/winner.html.erb within layouts/application
+  Rendered spaces/winner.html.erb within layouts/application (30.9ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/davidwelch/Development/Minesweeper-II/app/views/spaces/winner.html.erb:3: unknown regexp option - w):
+  
+app/views/spaces/winner.html.erb:3: unknown regexp option - w
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 17:02:10 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT "spaces".* FROM "spaces"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["button_class", "button"], ["updated_at", "2018-01-23 22:02:20.042202"], ["id", 2]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["button_class", "button"], ["updated_at", "2018-01-23 22:02:20.048082"], ["id", 3]]
+  [1m[35m (16.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 17:02:23 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 17:02:30 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"wNyCAtxiKGvTazSqwBJxksBJJ8eDfQfmZeqs7ibvLwFoxUh2U3Wqq9qZn+sSd4ZzWZLgZgXiDojcKKnAPxmZog==", "location"=>"0-1"}
+Redirected to http://localhost:3000/spaces/location=0-1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-1" for 127.0.0.1 at 2018-01-23 17:02:30 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-1"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 22:02:30.863338"], ["id", 2]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "guessed_button"], ["updated_at", "2018-01-23 22:02:30.868751"], ["id", 2]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 46ms (Views: 21.5ms | ActiveRecord: 16.9ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 17:02:38 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"xJ3U/efkjxN+vkj8/vo00ga9t5eSWvhFYfJmI9nSHohshB6JaPMN03dM470sn8Mzn2ZwNhTF8SvYMGMNwCSoKw==", "location"=>"1-0"}
+Redirected to http://localhost:3000/spaces/location=1-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=1-0" for 127.0.0.1 at 2018-01-23 17:02:38 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=1-0"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 22:02:38.153795"], ["id", 3]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "guessed_button"], ["updated_at", "2018-01-23 22:02:38.159406"], ["id", 3]]
+  [1m[35m (16.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+Redirected to http://localhost:3000/spaces/winner
+Completed 302 Found in 28ms (ActiveRecord: 20.6ms)
+
+
+Started GET "/spaces/winner" for 127.0.0.1 at 2018-01-23 17:02:38 -0500
+Processing by SpacesController#winner as HTML
+  Rendering spaces/winner.html.erb within layouts/application
+  Rendered spaces/winner.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 17:03:10 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 17:03:15 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"PKjotCIH3WihfjCUxCslU+Glr04SiXLyrBVnezd7UzmUsSLArRBfqKiMm9UWTtKyeH5o75QWe5wV12JVLo3lmg==", "location"=>"0-0"}
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 17:03:15 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 22:03:15.061420"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "bomb_button"], ["updated_at", "2018-01-23 22:03:15.065220"], ["id", 1]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+Redirected to http://localhost:3000/spaces/winner
+Completed 302 Found in 12ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/spaces/winner" for 127.0.0.1 at 2018-01-23 17:03:15 -0500
+Processing by SpacesController#winner as HTML
+  Rendering spaces/winner.html.erb within layouts/application
+  Rendered spaces/winner.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 17:03:52 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 21.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 17:03:53 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"D/e5Umu1QXH2Momxq0RnOfqkt+d7HLBQyAQ7XbZI9SWn7nMm5KLDsf/AIvB5IZDYY39wRv2DuT5xxj5zr75Dhg==", "location"=>"0-0"}
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 17:03:53 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE Grid Load (0.0ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 43ms (Views: 25.8ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT "spaces".* FROM "spaces"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["button_class", "button"], ["updated_at", "2018-01-23 22:06:32.802898"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["button_class", "button"], ["updated_at", "2018-01-23 22:06:32.807098"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["button_class", "button"], ["updated_at", "2018-01-23 22:06:32.810848"], ["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 17:06:40 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 29.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 17:06:42 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"Z0aWWCmpPBDP5hKS6o3AxYoI+vQ7rA8TOCI091hOLjvPX1wspr6+0MYUudM46DckE9M9Vb0zBn2B4DHZQbiYmA==", "location"=>"0-0"}
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 17:06:42 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 22:06:43.012071"], ["id", 1]]
+  [1m[35m (107.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "bomb_button"], ["updated_at", "2018-01-23 22:06:43.124536"], ["id", 1]]
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "spaces" WHERE "spaces"."guessed" = ?[0m  [["guessed", "t"]]
+  Rendering spaces/location.html.erb within layouts/application
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/location.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 172ms (Views: 22.9ms | ActiveRecord: 125.3ms)
+
+
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 17:10:27 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 56ms (Views: 24.8ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT "spaces".* FROM "spaces"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "f"], ["button_class", "button"], ["updated_at", "2018-01-23 22:10:34.772971"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 17:10:50 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"grRFjoF7RsMJLwGHb8cWnHyauVUXNyJqF8y+pFTG2NEqrY/6DmzEAwDdqsa9ouF95UF+9JGoKwSuDruKTTBucg==", "location"=>"0-0"}
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 17:10:50 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "guessed" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["guessed", "t"], ["updated_at", "2018-01-23 22:10:50.996290"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spaces" SET "button_class" = ?, "updated_at" = ? WHERE "spaces"."id" = ?[0m  [["button_class", "bomb_button"], ["updated_at", "2018-01-23 22:10:51.000158"], ["id", 1]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 5.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/models/space.rb:5:in `bomb_checker'
+app/controllers/spaces_controller.rb:18:in `location'
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 17:11:12 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE Grid Load (0.0ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/loser
+Completed 302 Found in 25ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/spaces/loser" for 127.0.0.1 at 2018-01-23 17:11:12 -0500
+Processing by SpacesController#loser as HTML
+  Rendering spaces/loser.html.erb within layouts/application
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/loser.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/spaces/new" for 127.0.0.1 at 2018-01-23 17:11:22 -0500
+Processing by SpacesController#new as HTML
+  [1m[36mGrid Load (0.2ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" ORDER BY "grids"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering spaces/new.html.erb within layouts/application
+  Rendered spaces/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spaces" for 127.0.0.1 at 2018-01-23 17:11:24 -0500
+Processing by SpacesController#create as HTML
+  Parameters: {"authenticity_token"=>"TO3QZdxL/11UXxFnEX9ZmSsaTJQwCBXiqvziVYwBBRvk9BoRU1x9nV2tuibDGq54ssGLNbaXHIwTPud7lfezuA==", "location"=>"0-0"}
+Redirected to http://localhost:3000/spaces/location=0-0
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/spaces/location=0-0" for 127.0.0.1 at 2018-01-23 17:11:24 -0500
+Processing by SpacesController#location as HTML
+  Parameters: {"location"=>"location=0-0"}
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrid Load (0.1ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE Grid Load (0.0ms)[0m  [1m[34mSELECT  "grids".* FROM "grids" WHERE "grids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/spaces/loser
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/spaces/loser" for 127.0.0.1 at 2018-01-23 17:11:24 -0500
+Processing by SpacesController#loser as HTML
+  Rendering spaces/loser.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/loser.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/spaces/loser" for 127.0.0.1 at 2018-01-23 17:12:38 -0500
+Processing by SpacesController#loser as HTML
+  Rendering spaces/loser.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/loser.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/spaces/loser" for 127.0.0.1 at 2018-01-23 17:12:58 -0500
+Processing by SpacesController#loser as HTML
+  Rendering spaces/loser.html.erb within layouts/application
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "0-1"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-0"], ["LIMIT", 1]]
+  [1m[36mSpace Load (0.1ms)[0m  [1m[34mSELECT  "spaces".* FROM "spaces" WHERE "spaces"."location" = ? LIMIT ?[0m  [["location", "1-1"], ["LIMIT", 1]]
+  Rendered spaces/loser.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+

@@ -1,6 +1,6 @@
 <style >
   .button {
-      background-color: green;
+      background-color: grey;
       border: none;
       color: white;
       padding: 15px 32px;
@@ -12,7 +12,7 @@
       border-radius: 8px;
     }
     .guessed_button{
-      background-color: gray;
+      background-color: black;
       border: none;
       color: white;
       padding: 15px 32px;
@@ -37,15 +37,6 @@
     }
 </style>
 
-<% if Space.bomb_checker(@location)%>
-  <h1><%= @location %> was a bomb! BOOOOO</h1>
-<% else Space.make_guess(@location) %>
-   <% if Space.win %>
-     <h1>YOU WIN!</h1>
-   <% end %>
-
-<% end %>
-
 
 <ul class="grid">
   <% (0..1).each do |row| %>
@@ -53,9 +44,10 @@
     <% (0..1).each do |col| %>
       <% @button_id = "#{row}-#{col}" %>
       <% @grid_location = Space.find_by(location: @button_id) %>
-      <% @class = @grid_location.bomb ? "bomb_button" : @grid_location.guessed ? "guessed_button" : "button" %>
-      <%= button_to @button_id, spaces_path, {method: :post, params: { location: "#{@grid_location.location}" }, class: "#{@class}"} %>
+
+      <%= button_to @button_id, spaces_path, {method: :post, params: { location: "#{@grid_location.location}" }, class: "#{@grid_location.button_class}"} %>
     <% end %>
+    <br>
     </ul>
   <% end %>
 </ul>

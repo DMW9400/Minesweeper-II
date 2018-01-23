@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20180122143631) do
     t.string "location"
     t.boolean "bomb"
     t.boolean "guessed", default: false
+    t.string "button_class", default: "button"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
