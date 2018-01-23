@@ -1,9 +1,34 @@
 <style >
   .button {
-      background-color: red
+      background-color: green;
       border: none;
-      color: grey;
+      color: white;
       padding: 15px 32px;
+      margin: 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+    .guessed_button{
+      background-color: gray;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      margin: 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+    .bomb_button{
+      background-color: red;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      margin: 5px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
@@ -14,15 +39,23 @@
 
 <% if Space.bomb_checker(@location)%>
   <h1><%= @location %> was a bomb! BOOOOO</h1>
-<% elsif @guessed %>
-  <h1><%= @location %> has been guessed! </h1>
-<% else %>
-  <h1>YOU WIN!</h1>
+<% else Space.make_guess(@location) %>
+   <% if Space.win %>
+     <h1>YOU WIN!</h1>
+   <% end %>
+
 <% end %>
 
-<div class="button">
-<%=  button_to "a1", spaces_path, method: :post, params: { location: "a1" } %>
-<%=  button_to "a2", spaces_path, method: :post, params: { location: "a2" } %>
-<%=  button_to "b1", spaces_path, method: :post, params: { location: "b1" } %>
-<%=  button_to "b2", spaces_path, method: :post, params: { location: "b2" } %>
-</div>
+
+<ul class="grid">
+  <% (0..1).each do |row| %>
+    <ul class="row">
+    <% (0..1).each do |col| %>
+      <% @button_id = "#{row}-#{col}" %>
+      <% @grid_location = Space.find_by(location: @button_id) %>
+      <% @cell_color = @grid_location.bomb ? "red" : @grid_location.guessed ? "green" : "pink" %>
+      <%= button_to @button_id, spaces_path, {method: :post, params: { location: "#{@grid_location.location}" }, class: "button", background_color: "#{@cell_color}"} %>
+    <% end %>
+    </ul>
+  <% end %>
+</ul>
