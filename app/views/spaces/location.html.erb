@@ -53,8 +53,8 @@
     <% (0..1).each do |col| %>
       <% @button_id = "#{row}-#{col}" %>
       <% @grid_location = Space.find_by(location: @button_id) %>
-      <% @cell_color = @grid_location.bomb ? "red" : @grid_location.guessed ? "green" : "pink" %>
-      <%= button_to @button_id, spaces_path, {method: :post, params: { location: "#{@grid_location.location}" }, class: "button", background_color: "#{@cell_color}"} %>
+      <% @class = @grid_location.bomb ? "bomb_button" : @grid_location.guessed ? "guessed_button" : "button" %>
+      <%= button_to @button_id, spaces_path, {method: :post, params: { location: "#{@grid_location.location}" }, class: "#{@class}"} %>
     <% end %>
     </ul>
   <% end %>
