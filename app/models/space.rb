@@ -2,7 +2,7 @@ class Space < ApplicationRecord
 
   @@size = 4
   # @@guess_limit = (@@size * @@size)
-  @@guess_limit = 5
+
 
   def self.reset
     Space.delete_all
@@ -25,8 +25,6 @@ class Space < ApplicationRecord
     @@size
   end
 
-  def self.guess_limit
-    @@guess_limit
-  end
+
 
 end

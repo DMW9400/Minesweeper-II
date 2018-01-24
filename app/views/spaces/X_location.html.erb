@@ -1,0 +1,55 @@
+<h1>WE DONT USE THIS ANYMORE</h1>
+
+<style >
+  .button {
+      background-color: grey;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      margin: 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+    .guessed_button{
+      background-color: black;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      margin: 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+    .bomb_button{
+      background-color: red;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      margin: 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+</style>
+
+
+<ul class="grid">
+  <% (0..1).each do |row| %>
+    <ul class="row">
+    <% (0..1).each do |col| %>
+      <% @button_id = "#{row}-#{col}" %>
+      <% @space_location = @grid_locations.find_by(location: @button_id) %>
+
+      <%= button_to @button_id, spaces_path, {method: :post, params: { location: "#{@space_location.location}" }, class: "#{@space_location.button_class}"} %>
+    <% end %>
+    <br>
+    </ul>
+  <% end %>
+</ul>

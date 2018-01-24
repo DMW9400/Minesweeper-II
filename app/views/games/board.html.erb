@@ -1,0 +1,75 @@
+<style >
+  .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .button {
+      background-color: grey;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      margin: 5px;
+      height: 75px;
+      width: 75px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 13px;
+      border-radius: 8px;
+      transition: all 0.5s ease-in-out;
+      box-shadow: 2px 2px 0px grey;
+    }
+  .button:hover {
+    transform: scale(1.1);
+    background-color: red;
+  }
+  .guessed_button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 5px;
+    height: 75px;
+    width: 75px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 8px;
+  }
+  .bomb_button{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 5px;
+    height: 75px;
+    width: 75px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 8px;
+  }
+</style>
+
+
+<ul class="grid">
+  <% (0..Space.size).each do |row| %>
+    <ul class="row">
+      <% (0..Space.size).each do |col| %>
+        <% @button_id = "#{row}-#{col}" %>
+        <% @space_instance = Space.find_by(location: @button_id) %>
+        <%= button_to @button_id, '/games/location', {method: :post, params: { location: @space_instance.location }, class: "#{@space_instance.button_class}"} %>
+      <% end %>
+    <br>
+    </ul>
+  <% end %>
+</ul>
