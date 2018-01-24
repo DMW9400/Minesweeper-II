@@ -1,0 +1,10 @@
+<h1>
+  <%= @user.name %>'s Stats:
+</h1>
+
+<h2>Wins</h2>
+<%= @user.wins %>
+<h2>Losses</h2>
+<%= @user.losses %>
+
+<%= button_to "NEW GAME", "/spaces/new", method: :get %>
