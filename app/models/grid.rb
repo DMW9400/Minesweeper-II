@@ -1,5 +1,4 @@
 class Grid < ApplicationRecord
-  belongs_to :session
 
   @@bomb = ""
   def self.bomb_maker

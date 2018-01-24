@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
+  #spaces
   get '/spaces/new', to: 'spaces#new'
   get '/spaces/board', to: 'spaces#board'
   post '/spaces/location', to: 'spaces#location'
-  # get '/spaces', to: 'spaces/'
   post '/spaces', to: 'spaces#create'
   get '/spaces/loser', to: 'spaces#loser'
   get '/spaces/winner', to: 'spaces#winner'
-  # get '/spaces/:location', to: 'spaces#location'
-  # resources :spaces
-
+  #Users
+  get '/users/new', to: 'users#new'
+  post '/users', to: 'users#create'
+  get '/users/:id', to: 'users#show'
   resources :top_players
   resources :sessions
   resources :grids
