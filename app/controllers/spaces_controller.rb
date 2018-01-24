@@ -1,30 +1,50 @@
 class SpacesController < ApplicationController
 
   def new
-    @grid = Grid.last
-    @spaces = @grid.spaces
+    Space.reset
+    Grid.bomb_maker
+    redirect_to '/spaces/board'
   end
 
   def create
-    @location = params[:location]
+    set_space
     redirect_to "/spaces/location=#{@location}"
   end
 
   def location
-    @location = params[:location][-3..-1]
-    @space = Space.find_by(location: @location)
-    Space.make_guess(@location)
-    Space.class_update(@location)
-    if Space.bomb_checker(@location)
+    @location = get_space
+    if @location == Grid.bomb
       redirect_to "/spaces/loser"
-    elsif Space.win
-      redirect_to "/spaces/winner"
+    else
+      # byebug
+      @user_guess = Space.find_by(location: @location)
+      @user_guess.update(guessed: true, button_class: "guessed_button")
+      Grid.increment_guess_counter
+      if Grid.guess_count == Space.guess_limit
+        redirect_to "/spaces/winner"
+      else
+        redirect_to "/spaces/board"
+      end
     end
+  end
+
+  def board
   end
 
   private
 
+  def get_space
+    params[:location][-3..-1]
+  end
+
   def spaces_params
     params.require(:spaces).permit(:guessed)
   end
+
+  def relevant_grid_spaces
+    @random_grid = Grid.all.sample
+    @rand_grid_spaces = @random_grid.spaces
+  end
+
+
 end

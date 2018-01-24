@@ -43,9 +43,9 @@
     <ul class="row">
     <% (0..1).each do |col| %>
       <% @button_id = "#{row}-#{col}" %>
-      <% @grid_location = Space.find_by(location: @button_id) %>
+      <% @space_location = @grid_locations.find_by(location: @button_id) %>
 
-      <%= button_to @button_id, spaces_path, {method: :post, params: { location: "#{@grid_location.location}" }, class: "#{@grid_location.button_class}"} %>
+      <%= button_to @button_id, spaces_path, {method: :post, params: { location: "#{@space_location.location}" }, class: "#{@space_location.button_class}"} %>
     <% end %>
     <br>
     </ul>

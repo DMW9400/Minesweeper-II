@@ -1,55 +1,32 @@
 class Space < ApplicationRecord
-  belongs_to :grid
 
+  @@size = 4
+  # @@guess_limit = (@@size * @@size)
+  @@guess_limit = 5
 
-  def self.bomb_checker(location)
-    @user_guess = Space.find_by(location: location)
-    if @user_guess.bomb == true
-      true
-    else
-      false
-    end
+  def self.reset
+    Space.delete_all
+    Space.new_spaces
   end
 
-  def self.make_guess(location)
-    @user_guess = Space.find_by(location: location)
-    @user_guess.update(guessed: true)
-  end
-
-  def self.class_update(location)
-    @user_guess = Space.find_by(location: location)
-    if @user_guess.bomb == true
-      @user_guess.update(button_class: "bomb_button")
-    else
-      @user_guess.update(button_class: "guessed_button")
-    end
-  end
-
-  def self.win
-    @guess_count = Space.where(:guessed => true).count
-    #change this to 2 afterwards
-      if @guess_count >= 2
-        true
-      else
-        false
-      end
-  end
-
-    def self.reset
-      Space.all.each do |space|
-        space.guessed = false
-        space.button_class = "button"
-        space.save
+  def self.new_spaces
+    (0..@@size).each do |row|
+      (0..@@size).each do |col|
+        Space.create(location: "#{row}-#{col}")
       end
     end
-    #
-    # def self.create_button
-    #     <%= button_to @button_id, spaces_path, {method: :post, params: { location: "#{@grid_location.location}" }, class: "guessed_button"} %>
-    # end
+  end
 
+  def self.find_spaces(grid)
+    @spaces = grid.spaces
+  end
 
+  def self.size
+    @@size
+  end
 
-
-
+  def self.guess_limit
+    @@guess_limit
+  end
 
 end
