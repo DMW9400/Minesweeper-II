@@ -45,8 +45,8 @@ font-family: 'VT323', monospace;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-image: url(http://beeple-crap.com/media/everyday9/january2015/big/01-29-15.jpg);
-  background-size: 100% 100%;
+  background-image: url(https://media.giphy.com/media/eQe22nA7WFAuQ/giphy.gif);
+  background-size: cover;
   height: 100%
 }
 .user-buttons {

@@ -1,5 +1,5 @@
 <div class="lose">
   <h1>OUCH! Well that sucks...</h1>
   <%= button_to "NEW GAME", "/games/new", method: :get, class: 'user-buttons' %>
-  <%= button_to "VIEW YOUR STATS", "/users/#{User.last.id}", method: :get, class: 'user-buttons' %>
+  <%= button_to "VIEW YOUR STATS", "/users/#{session[:user_id]}", method: :get, class: 'user-buttons' %>
 </div>
