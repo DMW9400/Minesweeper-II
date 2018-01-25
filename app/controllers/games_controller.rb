@@ -1,18 +1,23 @@
 class GamesController < ApplicationController
 
   def new
-    Game.create(user_id: User.last.id)
-    Space.reset
-    Game.clear_bombs
-    Game.bomb_maker
-    redirect_to '/games/board'
+    if logged_in?
+      Game.create(user_id: current_user.id)
+      Space.reset
+      Game.clear_bombs
+      Game.bomb_maker
+      @current_user = current_user
+      redirect_to '/games/board'
+    end
   end
 
   def location
+    @game = Game.last
     @location = get_space
-    
+    @current_user = current_user
     if Game.bombs.include?(@location)
-      Game.add_loss
+      @current_user.losses += 1
+      @current_user.save
       redirect_to "/games/loser"
     else
       @user_guess = Space.find_by(location: @location)
@@ -20,7 +25,9 @@ class GamesController < ApplicationController
 
       Game.increment_guess_counter
       if Game.guess_count == Game.guess_limit
-        Game.add_win
+        # byebug
+        @current_user.wins += 1
+        @current_user.save
         redirect_to "/games/winner"
       else
         redirect_to "/games/board"

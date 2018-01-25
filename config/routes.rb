@@ -1,15 +1,10 @@
 Rails.application.routes.draw do
-  #spaces
-  # get '/spaces/new', to: 'spaces#new'
-  # get '/spaces/board', to: 'spaces#board'
-  # post '/spaces/location', to: 'spaces#location'
-  # post '/spaces', to: 'spaces#create'
-  # get '/spaces/loser', to: 'spaces#loser'
-  # get '/spaces/winner', to: 'spaces#winner'
 
   get '/users/new', to: 'users#new'
   post '/users', to: 'users#create'
   get '/users/:id', to: 'users#show'
+  get '/users/login', to: 'users#login'
+  post '/users', to: 'users#login_check'
 
   get '/games/new', to: 'games#new'
   get '/games/board', to: 'games#board'
@@ -18,4 +13,9 @@ Rails.application.routes.draw do
   get '/games/loser', to: 'games#loser'
   get '/games/winner', to: 'games#winner'
 
+  # get 'signup', to: "users#new", as: "signup"
+  # post '/users', to: "users#create"
+  get 'sessions/new', to: 'sessions#new', as: 'login'
+  post 'sessions', to: 'sessions#create', as: 'sessions'
+  delete 'sessions', to: 'sessions#destroy'
 end
