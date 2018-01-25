@@ -3,13 +3,15 @@ class GamesController < ApplicationController
   def new
     Game.create(user_id: User.last.id)
     Space.reset
+    Game.clear_bombs
     Game.bomb_maker
     redirect_to '/games/board'
   end
 
   def location
     @location = get_space
-    if @location == Game.bomb
+    
+    if Game.bombs.include?(@location)
       Game.add_loss
       redirect_to "/games/loser"
     else
