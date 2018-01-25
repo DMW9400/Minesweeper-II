@@ -11,7 +11,7 @@
     flex-direction: row;
   }
   .button {
-      background-color: grey;
+      background-color: #29293d;
       border: none;
       color: white;
       padding: 15px 32px;
@@ -23,14 +23,16 @@
       display: inline-block;
       font-size: 13px;
       border-radius: 8px;
-      transition: all 0.5s ease-in-out;
-      box-shadow: 2px 2px 0px grey;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 2px 2px 2px grey;
     }
   .button:hover {
     transform: scale(1.1);
-    background-color: red;
+    background-color: #980c0c;
   }
   .guessed_button {
+    /* background:url("https://imgur.com/a/B8TPg"); */
+    /* background:url(../assets/images/dan.png); */
     background-color: black;
     border: none;
     color: white;
@@ -59,17 +61,22 @@
     border-radius: 8px;
   }
 </style>
-
-
-<ul class="grid">
-  <% (0..Space.size).each do |row| %>
-    <ul class="row">
-      <% (0..Space.size).each do |col| %>
-        <% @button_id = "#{row}-#{col}" %>
-        <% @space_instance = Space.find_by(location: @button_id) %>
-        <%= button_to @button_id, '/games/location', {method: :post, params: { location: @space_instance.location }, class: "#{@space_instance.button_class}"} %>
-      <% end %>
-    <br>
-    </ul>
-  <% end %>
-</ul>
+<div class="game-container">
+  <ul class="grid">
+    <% (0..Space.size).each do |row| %>
+      <ul class="row">
+        <% (0..Space.size).each do |col| %>
+          <% @button_id = "#{row}-#{col}" %>
+          <% @space_instance = Space.find_by(location: @button_id) %>
+          <%= button_to "", '/games/location', {method: :post, params: { location: @space_instance.location }, class: "#{@space_instance.button_class}"} %>
+        <% end %>
+      <br>
+      </ul>
+    <% end %>
+  </ul>
+  <div class="instructions">
+    <h3>Welcome to the Game!</h3>
+    <p> In this version of Minesweeper, you must take 5 very calculated steps in order to get to safety. Be careful! One wrong step and you're a goner.
+    </p>
+  </div>
+</div>

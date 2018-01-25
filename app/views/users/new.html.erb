@@ -1,6 +1,10 @@
+<div class="user-container">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 <h1>Please enter a name:</h1>
-
+<p>
 <%= form_for(@user) do |f|  %>
   <%= f.text_field :name  %>
-  <%= f.submit  %>
+  <%= f.submit class: 'user-buttons'  %>
 <% end  %>
+</p>
+</div>

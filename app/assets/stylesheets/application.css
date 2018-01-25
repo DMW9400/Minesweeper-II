@@ -1,15 +1,64 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+html {
+background-image: url('http://beeple-crap.com/media/everyday11/april2017/big/04-05-17.jpg');
+font-family: 'VT323', monospace;
+background-size: 100% 100%;
+height: 100%
+}
+.wrapper-container {
+background-color: rgba(255,255,255,.4);
+position: absolute; top: 0; left: 0; height: 100%; width: 100%;
+}
+.user-container {
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+font-family: 'VT323', monospace;
+}
+.game-container {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  /* flex-direction: column */
+}
+.grid {
+  margin: 20px;
+}
+.instructions {
+  font-size: 30px;
+  font-weight: bold;
+  color: #29293d;
+}
+.win {
+  color: #29293d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(http://beeple-crap.com/media/everyday11/april2017/big/04-01-17.jpg);
+  background-size: 100% 100%;
+  height: 100%
+}
+.lose {
+  color: #29293d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(http://beeple-crap.com/media/everyday9/january2015/big/01-29-15.jpg);
+  background-size: 100% 100%;
+  height: 100%
+}
+.user-buttons {
+background-color: #29293d   ;
+color: white;
+border: none;
+padding: 6px 10px;
+margin: 5px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
+font-family: 'VT323', monospace;
+border-radius: 4px;
+}

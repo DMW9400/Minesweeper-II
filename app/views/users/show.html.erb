@@ -1,10 +1,13 @@
-<h1>
-  <%= @user.name %>'s Stats:
-</h1>
-
-<h2>Wins</h2>
-<%= @user.wins %>
-<h2>Losses</h2>
-<%= @user.losses %>
-
-<%= button_to "NEW GAME", "/games/new", method: :get %>
+<div class= "user-container">
+  <href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <h1>
+    <%= @user.name %>'s Stats:
+  </h1>
+  <h2>Wins</h2>
+  <%= @user.wins %>
+  <h2>Losses</h2>
+  <%= @user.losses %>
+<br>
+<br>
+  <%= button_to "New Game", "/games/new", method: :get, class: 'user-buttons' %>
+</div>

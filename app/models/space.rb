@@ -1,7 +1,6 @@
 class Space < ApplicationRecord
 
   @@size = 4
-  # @@guess_limit = (@@size * @@size)
 
 
   def self.reset
@@ -24,7 +23,5 @@ class Space < ApplicationRecord
   def self.size
     @@size
   end
-
-
 
 end

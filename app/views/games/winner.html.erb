@@ -1,6 +1,5 @@
-<h1>YOU WON!</h1>
-
-<h1>PRESS HERE FOR NEW GAME</h1>
-
-<%= button_to "NEW GAME", "/games/new", method: :get %>
-<%= button_to "VIEW YOUR STATS", "/users/#{User.last.id}", method: :get %>
+<div class="win">
+  <h1>Congratulations! You made it back to safety!</h1>
+  <%= button_to "NEW GAME", "/games/new", method: :get, class: 'user-buttons' %>
+  <%= button_to "VIEW YOUR STATS", "/users/#{User.last.id}", method: :get, class: 'user-buttons' %>
+</div>
