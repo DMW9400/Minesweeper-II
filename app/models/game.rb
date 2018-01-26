@@ -1,5 +1,6 @@
 class Game < ApplicationRecord
   belongs_to :user
+  validates :user_id, presence:true
 
   @@bombs = []
   @@guess_limit = 5
@@ -15,21 +16,6 @@ class Game < ApplicationRecord
     end
     @@guess_count = 0
   end
-
-  # def self.add_win
-  #   # Refactor - check why @current_user isn't transferring from games_controller
-  #   # @user = User.find(@game.user_id)
-  #   @current_user.wins +=1
-  #   @current_user.save
-  # end
-  #
-  # def self.add_loss
-  #
-  #   # @user = User.find_by(id: session[:user_id])
-  #   # @user = User.find(@game.user_id)
-  #   @current_user.losses +=1
-  #   @current_user.save
-  # end
 
   def self.increment_guess_counter
     @@guess_count += 1
