@@ -1,5 +1,8 @@
 <div class="win">
-  <h1>Congratulations! You made it back to safety!</h1>
+  <h1>Congratulations! </h1>
+<h2>
+  You made it to safety and saved the human race. <br>You are a hero, pat yourself on the back.
+</h2>
   <%= button_to "NEW GAME", "/games/new", method: :get, class: 'user-buttons' %>
   <%= button_to "VIEW YOUR STATS", "/users/#{session[:user_id]}", method: :get, class: 'user-buttons' %>
 </div>

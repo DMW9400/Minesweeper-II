@@ -1,14 +1,19 @@
-<div class= "user-container">
+<div class= "user-container stats">
   <href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
   <h1>
     <%= @user.name %>'s Stats:
   </h1>
-  <h2>Wins</h2>
-  <%= @user.wins %>
-  <h2>Losses</h2>
-  <%= @user.losses %>
-<br>
-<br>
-  <%= button_to "New Game", "/games/new", method: :get, class: 'user-buttons' %>
-  <%= button_to "Log Out", "/sessions", method: :delete, class: 'user-buttons' %>
+  <h1>Wins:
+    <%= @user.wins %>
+  </h1>
+  <h1>Losses:
+    <%= @user.losses %>
+  </h1>
+  <br>
+  <div class="new-game-btn">
+    <%= button_to "New Game", "/games/new", method: :get, class: 'user-buttons' %>
+  </div>
+  <div class= "log-out-btn">
+    <%= button_to "Log Out", "/sessions", method: :delete, class: 'user-buttons' %>
+  </div>
 </div>
